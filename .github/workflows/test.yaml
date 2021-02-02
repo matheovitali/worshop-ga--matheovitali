@@ -23,10 +23,12 @@ jobs:
     container: docker://epitechcontent/epitest-docker
 
     steps:
-      - name: Say Hello
+      - name: Checkout
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - run: make tests_run
-             make coverage  
+
+      - name: Run tests_run
+        run: make tests_run
+
+      - name: Get Coverage 
+        run: make Coverage
 
