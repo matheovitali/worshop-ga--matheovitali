@@ -1,9 +1,12 @@
-name: 'Tests'
+name: Tests
+
 
 on:
   push:
     branches:
-	    - master
+	    - main
+      - dev
+
 
 jobs:
   hello-world:
