@@ -2,7 +2,7 @@ name: 'Tests'
 on:
   push:
     branches:
-	    - dev
+	    - master
 jobs:
   hello-world:
     runs-on: ubuntu-20.04
