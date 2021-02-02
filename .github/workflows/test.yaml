@@ -12,7 +12,6 @@ jobs:
 
   hello-world:
     runs-on: ubuntu-20.04
-
     steps:
     - name: Say Welcome
       shell: bash
@@ -20,7 +19,6 @@ jobs:
       
   unit-test:
     runs-on: ubuntu-20.04
-
     steps:
     - name: Say Hello
     - uses: actions/checkout@v2
