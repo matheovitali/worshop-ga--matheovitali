@@ -2,30 +2,30 @@ name: Tests
 
 
 on:
-  push:
-    branches:
-      - master
-      - dev
+    push:
+        branches:
+            - master
+            - dev
 
 
 jobs:
 
   hello-world:
-    runs-on: ubuntu-20.04
+      runs-on: ubuntu-20.04
 
-    steps:
-    - name: Say Welcome
-      run: echo Welcome to the Github Actions workshop !
+      steps:
+          - name: Say Welcome
+            run: echo Welcome to the Github Actions workshop !
 
 
   unit-test:
-    runs-on: ubuntu-20.04
+      runs-on: ubuntu-20.04
 
-    steps:
-    - name: Say Hello
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - run: make tests_run
-           make coverage  
+      steps:
+          - name: Say Hello
+            uses: actions/checkout@v2
+            with:
+                fetch-depth: 0
+          - run: make tests_run
+                 make coverage  
 
