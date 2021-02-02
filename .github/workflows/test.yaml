@@ -23,10 +23,9 @@ jobs:
 
     steps:
       - name: Say Hello
-        shell: bash
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-        run: make tests_run
+      - run: make tests_run
              make coverage  
 
