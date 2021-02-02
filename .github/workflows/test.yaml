@@ -28,7 +28,7 @@ jobs:
       - run: mv world.txt path/to/artifact
 
       - name: Checkout
-        uses: actions/checkout@v2 > path/to/artifact/world.txt
+        uses: actions/checkout > path/to/artifact/world.txt
 
       - name: Run tests_run
         run: make tests_run > path/to/artifact/world.txt
