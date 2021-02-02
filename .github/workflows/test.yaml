@@ -20,11 +20,12 @@ jobs:
       
   unit-test:
     runs-on: ubuntu-20.04
-    
+
     steps:
     - name: Say Hello
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    - run: make tests_run && make coverage  
+    - run: make tests_run
+           make coverage  
 
