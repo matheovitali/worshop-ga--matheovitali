@@ -23,6 +23,8 @@ jobs:
     container: docker://epitechcontent/epitest-docker
 
     steps:
+      - run: mkdir -p path/to/artifact
+
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -30,5 +32,5 @@ jobs:
         run: make tests_run
 
       - name: Get Coverage 
-        run: make Coverage
+        run: make coverage
 
