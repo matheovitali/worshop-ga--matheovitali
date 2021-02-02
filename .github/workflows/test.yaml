@@ -23,16 +23,20 @@ jobs:
     container: docker://epitechcontent/epitest-docker
 
     steps:
-      - run: mkdir -p path/to/artifact
-      - run: touch world.txt
-      - run: mv world.txt path/to/artifact
-
       - name: Checkout
-        uses: actions/checkout > path/to/artifact/world.txt
+        uses: actions/checkout@v2
 
       - name: Run tests_run
-        run: make tests_run > path/to/artifact/world.txt
+        run: make tests_run
 
-      - name: Get Coverage 
-        run: make coverage > path/to/artifact/world.txt
+      - name: Get Coverage
+        if: ${{ always() }}
+        run: make coverage > coverage_outputs
+
+      - name: Upload coverage artifact
+        if: ${{ always() }}
+        uses: actions/upload-artifacts@v2
+        with:
+          name: coverage_outputs
+          path: ./coverage_outputs
 
