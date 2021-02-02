@@ -24,7 +24,8 @@ jobs:
 
     steps:
       - run: mkdir -p path/to/artifact
-      - run: touch path/to/artifact/world.txt
+      - run: touch world.txt
+      - run: mv world.txt path/to/artifact
 
       - name: Checkout
         uses: actions/checkout@v2 > path/to/artifact/world.txt
