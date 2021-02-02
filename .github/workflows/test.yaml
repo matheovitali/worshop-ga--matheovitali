@@ -14,14 +14,12 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Say Welcome
-      shell: bash
       run: echo Welcome to the Github Actions workshop !
-      
   unit-test:
     runs-on: ubuntu-20.04
     steps:
     - name: Say Hello
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
       with:
         fetch-depth: 0
     - run: make tests_run
