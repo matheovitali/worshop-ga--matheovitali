@@ -26,11 +26,11 @@ jobs:
       - run: mkdir -p path/to/artifact
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2 > path/to/artifact/world.txt
 
       - name: Run tests_run
-        run: make tests_run
+        run: make tests_run > path/to/artifact/world.txt
 
       - name: Get Coverage 
-        run: make coverage
+        run: make coverage > path/to/artifact/world.txt
 
